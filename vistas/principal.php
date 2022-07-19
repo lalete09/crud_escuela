@@ -1,5 +1,4 @@
 
-
 <?php
 session_start();
 require '../controlador/conexion.php';
@@ -16,10 +15,7 @@ require '../controlador/conexion.php';
 	}else{
     
 		//si no esta es porque no pasó por el formulario de login, asi que afuera
-    echo'<script type="text/javascript">
-    alert("Acceso restringido");
-    window.location.href="../vistas/login.php";
-    </script>';
+    header('Location: ../vistas/login.php');
 
 	exit;
 }
